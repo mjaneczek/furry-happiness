@@ -1,5 +1,8 @@
 describe CreateTicketInteractor do
-  it 'works' do
+  subject { described_class.new ticket_name }
+  let(:ticket_name) { 'Write tests' }
 
+  it 'returns a ticket with "Write tests" name' do
+    expect(subject.call).to eq(name: ticket_name)
   end
 end
