@@ -4,7 +4,7 @@ class CreateTicketInteractor
     @gateway = gateway
   end
 
-  def call
+  def create
     @gateway.create_ticket @name
   end
 end

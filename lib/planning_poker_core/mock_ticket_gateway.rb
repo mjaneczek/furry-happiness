@@ -1,5 +1,5 @@
 class MockTicketGateway
   def create_ticket(name)
-    { name: name }
+    Ticket.new name
   end
 end

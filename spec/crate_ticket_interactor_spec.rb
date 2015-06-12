@@ -3,6 +3,7 @@ describe CreateTicketInteractor do
   let(:ticket_name) { 'Write tests' }
 
   it 'returns a ticket with "Write tests" name' do
-    expect(subject.call).to eq(name: ticket_name)
+    ticket = subject.create
+    expect(ticket.name).to eq(ticket_name)
   end
 end
