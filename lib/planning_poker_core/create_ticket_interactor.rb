@@ -1,9 +1,10 @@
 class CreateTicketInteractor
-  def initialize(name)
+  def initialize(name, gateway)
     @name = name
+    @gateway = gateway
   end
 
   def call
-    { name: 'Write tests' }
+    @gateway.create_ticket @name
   end
 end
