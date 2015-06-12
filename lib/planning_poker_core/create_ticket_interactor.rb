@@ -1,0 +1,3 @@
+class CreateTicketInteractor
+
+end
