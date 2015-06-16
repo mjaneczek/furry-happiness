@@ -14,8 +14,8 @@ module AgileBoardCore
       end
     end
 
-    def estimate_ticket(ticket_id, estimation)
-      Ticket.new ticket_id, 'name', estimation
+    def edit_ticket(ticket_id, hash_attributes)
+      Ticket.new ticket_id, 'name', hash_attributes[:estimation], hash_attributes[:column]
     end
   end
 end

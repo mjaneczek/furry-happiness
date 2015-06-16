@@ -7,7 +7,7 @@ module AgileBoardCore
     end
 
     def estimate
-      @gateway.estimate_ticket(@ticket_id, @estimation)
+      @gateway.edit_ticket(@ticket_id, estimation: @estimation)
     end
   end
 end
