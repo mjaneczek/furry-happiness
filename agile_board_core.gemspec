@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'planning_poker_core/version'
+require 'agile_board_core/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'planning_poker_core'
-  spec.version       = PlanningPokerCore::VERSION
+  spec.name          = 'agile_board_core'
+  spec.version       = AgileBoardCore::VERSION
   spec.authors       = ['Michał Janeczek']
   spec.email         = ['michal.janeczek@ymail.com']
 
