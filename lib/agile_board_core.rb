@@ -7,5 +7,12 @@ require 'agile_board_core/mock_ticket_gateway'
 require 'agile_board_core/ticket'
 
 module AgileBoardCore
+  def self.gateway
+    @@gateway ||= MockTicketGateway.new
+  end
+
+  def self.gateway=(gateway)
+    @@gateway = gateway
+  end
 end
 

@@ -1,13 +1,12 @@
 module AgileBoardCore
   class EstimateTicketInteractor
-    def initialize(id, estimation, gateway)
+    def initialize(id, estimation)
       @ticket_id = id
       @estimation = estimation
-      @gateway = gateway
     end
 
     def estimate
-      @gateway.edit_ticket(@ticket_id, estimation: @estimation)
+      AgileBoardCore.gateway.edit_ticket(@ticket_id, estimation: @estimation)
     end
   end
 end

@@ -1,6 +1,6 @@
 module AgileBoardCore
   describe CreateTicketInteractor do
-    subject { described_class.new ticket_name, MockTicketGateway.new }
+    subject { described_class.new ticket_name }
     let(:ticket_name) { 'Write tests' }
 
     it 'returns a ticket with "Write tests" name' do

@@ -1,12 +1,11 @@
 module AgileBoardCore
   class CreateTicketInteractor
-    def initialize(name, gateway)
+    def initialize(name)
       @name = name
-      @gateway = gateway
     end
 
     def create
-      @gateway.create_ticket @name
+      AgileBoardCore.gateway.create_ticket @name
     end
   end
 end

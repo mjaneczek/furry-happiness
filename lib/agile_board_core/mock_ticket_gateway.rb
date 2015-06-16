@@ -1,7 +1,7 @@
 module AgileBoardCore
   class MockTicketGateway
     def initialize
-      @tickets = []
+      clear!
     end
 
     def get_tickets
@@ -15,7 +15,11 @@ module AgileBoardCore
     end
 
     def edit_ticket(ticket_id, hash_attributes)
-      Ticket.new ticket_id, 'name', hash_attributes[:estimation], hash_attributes[:column]
+      @tickets.detect {|t| t.id == ticket_id}.tap {|t| t.estimation = hash_attributes[:estimation]; t.column = hash_attributes[:column] }
+    end
+
+    def clear!
+      @tickets = []
     end
   end
 end
